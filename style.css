@@ -33,11 +33,28 @@ button:hover{
     background-color: #3E8E41;
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 75vh;
+}
+
+.timer {
+    font-size: 4rem;
+}
+  
+.controls {
+    display: flex;
+    gap: 1rem;
+}
+
 @media only screen and (max-width: 1026px) {
     button {
         display: none;
     }
     h1{
-        font-size:4em;
+        font-size:1em;
     }
 }

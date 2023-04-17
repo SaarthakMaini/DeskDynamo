@@ -7,10 +7,16 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <div class="container">
+    <div class="timer">
     <h1 id="timer-display">00:00</h1><br>
+    </div>
+    <div class="controls">
     <button id="start-btn">Start</button>
     <button id="pause-btn">Pause</button>
     <button id="reset-btn">Reset</button>
+    </div>
+    </div>
     <script>
       let isRunning = false
       let isPaused = false
@@ -58,7 +64,7 @@
           const seconds = totalSeconds % 60
           const displayMinutes = minutes < 10 ? '0' + minutes : minutes
           const displaySeconds = seconds < 10 ? '0' + seconds : seconds
-          if(seconds==30){
+          if(seconds==5){
             clearInterval(interval);
             timerDisplay.textContent = "Time To Exercise!";
             return;
