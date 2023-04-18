@@ -23,11 +23,15 @@ To use the DeskDynamo, follow these steps:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`cd DeskDynamo`
 
-4. Install the dependencies:
+4. Install Electron:
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`npm install electron --save-dev`
+
+5. Install the dependencies:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`npm install`
 
-5. Start the app:
+6. Start the app:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`npm start`
 
