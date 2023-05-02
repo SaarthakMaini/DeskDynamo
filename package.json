@@ -9,6 +9,6 @@
     "author": "Saarthak Maini",
     "license": "ISC",
     "devDependencies": {
-        "electron": "^24.1.2"
+        "electron": "^24.1.3"
     }
 }
