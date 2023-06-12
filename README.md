@@ -63,3 +63,7 @@ The DeskDynamo App is built using the following technologies:
 - Node.js - a JavaScript runtime that allows developers to run JavaScript on the server side.
 - CSS - a stylesheet language used for describing the presentation of a document written in HTML.
 - HTML - a markup language used for creating web pages.
+
+## License
+
+The software in this repository is released under the [MIT License](https://opensource.org/license/mit/).
