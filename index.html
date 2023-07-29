@@ -2,11 +2,15 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Sample Project</title>
+    <title>DeskDynamo</title>
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <div>
+    <h1 id="heading">DeskDynamo</h1>
+    <p>The DeskDynamo App is a simple desktop application that displays a timer on your screen. It allows you to set a countdown timer, move the timer box with your cursor, and also add tasks       to be done. Once every hour, the app will remind you to take a 5 minute break and exercise.</p>
+    </div>
     <div class="container">
     <div class="timer">
     <h1 id="timer-display">00:00</h1><br>
@@ -17,67 +21,6 @@
     <button id="reset-btn">Reset</button>
     </div>
     </div>
-    <script>
-      let isRunning = false
-      let isPaused = false
-      let interval
-
-      const timerDisplay = document.getElementById('timer-display')
-      const startBtn = document.getElementById('start-btn')
-      const pauseBtn = document.getElementById('pause-btn')
-      const resetBtn = document.getElementById('reset-btn')
-      const audio = new Audio('audio/alarm-clock-short-6402.mp3')
-
-      startBtn.addEventListener('click', () => {
-        if (!isRunning) {
-          startTimer()
-          isRunning = true
-        }
-      })
-
-      pauseBtn.addEventListener('click', () => {
-        if (isRunning) {
-          if (isPaused) {
-            interval = setInterval(() => {
-              startTimer(1)
-            }, 1000)
-            pauseBtn.textContent = 'Pause'
-            isPaused = false
-            audio.play();
-          } else {
-            clearInterval(interval)
-            pauseBtn.textContent = 'Resume'
-            isPaused = true
-            audio.pause();
-          }
-        }
-      })
-
-      resetBtn.addEventListener('click', () => {
-        clearInterval(interval)
-        timerDisplay.textContent = '00:00'
-        pauseBtn.textContent = 'Pause'
-        isRunning = false
-        isPaused = false
-      })
-
-      function startTimer() {
-        let totalSeconds = 0
-        interval = setInterval(() => {
-          const minutes = Math.floor(totalSeconds / 60)
-          const seconds = totalSeconds % 60
-          const displayMinutes = minutes < 10 ? '0' + minutes : minutes
-          const displaySeconds = seconds < 10 ? '0' + seconds : seconds
-          if(seconds==5){
-            clearInterval(interval);
-            timerDisplay.textContent = "Time To Exercise!";
-            audio.play();
-            return;
-          }
-          timerDisplay.textContent = `${displayMinutes}:${displaySeconds}`
-          totalSeconds++
-        }, 1000)
-      }
-    </script>
+    <script src="script.js" type="text/javascript"></script>
   </body>
 </html>
