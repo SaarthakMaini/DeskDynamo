@@ -33,6 +33,30 @@ button:hover{
     background-color: #3E8E41;
 }
 
+input[type=text]{
+  width: 100%;
+  padding: 12px;  
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+ol {
+  background: black;
+  padding: 20px;
+  margin-right:10px;
+}
+
+ol li {
+  background: #374145;
+  color: white;
+  padding: 5px;
+  margin-left: 35px;
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -40,6 +64,16 @@ button:hover{
     justify-content: center;
     height: 75vh;
     border: 5px solid black
+}
+
+.header{
+	display:flex;
+}
+
+.input {
+    justify-content : flex-start;
+    margin-right:5px;
+    margin-left:5px;
 }
 
 .timer {
@@ -64,6 +98,9 @@ button:hover{
     }
     h1{
 	font-size:1em;
+    }
+    .input{
+	display:none;
     }
     #heading{
 	display:none;

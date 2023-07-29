@@ -10,8 +10,20 @@
     <div>
     <h1 id="heading">DeskDynamo</h1>
     <p>The DeskDynamo App is a simple desktop application that displays a timer on your screen. It allows you to set a countdown timer, move the timer box with your cursor, and also add tasks       to be done. Once every hour, the app will remind you to take a 5 minute break and exercise.</p>
+    <div id="tasks" class="header">
+    <input type="text" id="mytasks" placeholder="My Tasks...">
+    <button id = "add-btn">Add</button>
+    </div>
+    <h2>My Tasks</h2>
+    <ol id="task"></ol>
     </div>
     <div class="container">
+    <div class="input">
+    <label for="min" class = "input">Please enter minutes spent working:</label>
+    <input type="text" id="min" name="min" placeholder="Take a break after these minutes..." class="input">
+    <label for="sec" class="input">Please enter the seconds spent working:</label>
+    <input type="text" id="sec" name="sec" placeholder="and these seconds..." class= "input">
+    </div>
     <div class="timer">
     <h1 id="timer-display">00:00</h1><br>
     </div>
