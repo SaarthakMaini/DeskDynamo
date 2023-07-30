@@ -1,7 +1,5 @@
 let isRunning = false
-let isPaused = false
-let interval,minutes,seconds;
-
+let interval,minutes,seconds,totalSeconds,inputMinutes,inputSeconds,targetSeconds;
 
 const timerDisplay = document.getElementById('timer-display')
 const startBtn = document.getElementById('start-btn')
@@ -12,31 +10,29 @@ const audio = new Audio('audio/alarm-clock-short-6402.mp3')
 
 startBtn.addEventListener('click', () => {
 if (!isRunning) {
-  startTimer()
   isRunning = true
+  startTimer(0)
 }
 })
 
 pauseBtn.addEventListener('click', () => {
-if (isRunning) {
-  if (isPaused) {
-	interval = setInterval(() => {
-	  startTimer(1)
-	}, 1000)
-	pauseBtn.textContent = 'Pause'
-	isPaused = false
-	audio.play();
-  } else {
+if(!isRunning){
+	isRunning = true
+    pauseBtn.textContent = 'Pause'
+    startTimer(totalSeconds)
+}else{
+    isRunning = false
 	clearInterval(interval)
 	pauseBtn.textContent = 'Resume'
-	isPaused = true
-	audio.pause();
-  }
+	audio.pause()
 }
 })
 
 resetBtn.addEventListener('click', () => {
 clearInterval(interval)
+totalSeconds = 0
+audio.load()
+audio.pause()
 timerDisplay.textContent = '00:00'
 pauseBtn.textContent = 'Pause'
 isRunning = false
@@ -52,8 +48,8 @@ addBtn.addEventListener('click',() => {
 	container.appendChild(liElement)
 })
 
-function startTimer() {
-let totalSeconds = 0
+function startTimer(t) {
+totalSeconds = t
 interval = setInterval(() => {
   minutes = Math.floor(totalSeconds / 60)
   seconds = totalSeconds % 60

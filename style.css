@@ -90,7 +90,7 @@ ol li {
 }
 
 @media only screen and (max-width: 1026px) {
-    button,p{
+    button,p,h2,input,.input,#heading,#task{
         display: none;
     }
     .container{
@@ -99,10 +99,15 @@ ol li {
     h1{
 	font-size:1em;
     }
-    .input{
+    /* 
+.input{
 	display:none;
     }
     #heading{
 	display:none;
     }
+    #task{
+    display: none;
+    }
+ */
 }
