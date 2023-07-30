@@ -1,6 +1,6 @@
 # **DeskDynamo**
 
-The DeskDynamo App is a simple desktop application that displays a timer on your screen. It allows you to set a countdown timer, move the timer box with your cursor, and also add tasks to be done. Once every hour, the app will remind you to take a 5 minute break and exercise.
+The DeskDynamo App is a simple desktop application that displays a timer on your screen. It allows you to set a countdown timer, move the timer box with your cursor, and also add tasks to be done. Once every hour, the app will remind you to take a 5 minute break and exercise as per the duration specified by the user.
 
 ## **Features**
 
@@ -8,6 +8,15 @@ The DeskDynamo App is a simple desktop application that displays a timer on your
 - Move the timer box with your cursor
 - Add tasks to be done
 - Hourly reminders to take a break and exercise
+
+## DeskDynamo Interface
+<img src="img/DeskDynamo_Interface.png" alt="DeskDynamo Interface"  height="600">
+
+## DeskDynamo Working
+<img src="img/DeskDynamo_Working.png" alt="DeskDynamo Working"  height="600">
+
+## DeskDynamo Interface
+<img src="img/DeskDynamo_Timer_Activation.png" alt="DeskDynamo DeskDynamo Working"  height="600">
 
 ## **Installation**
 
