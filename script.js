@@ -1,5 +1,5 @@
 let isRunning = false
-let interval,minutes,seconds,totalSeconds,inputMinutes,inputSeconds,targetSeconds;
+let interval,minutes,seconds,totalSeconds,inputMinutes,inputSeconds,targetSeconds,targetMinutes;
 
 const timerDisplay = document.getElementById('timer-display')
 const startBtn = document.getElementById('start-btn')
@@ -9,6 +9,10 @@ const addBtn = document.getElementById('add-btn')
 const audio = new Audio('audio/alarm-clock-short-6402.mp3')
 
 startBtn.addEventListener('click', () => {
+inputMinutes = document.getElementById("min").value
+inputSeconds = document.getElementById("sec").value
+targetSeconds = parseInt(inputSeconds)
+targetMinutes = parseInt(inputMinutes)
 if (!isRunning) {
   isRunning = true
   startTimer(0)
@@ -55,7 +59,7 @@ interval = setInterval(() => {
   seconds = totalSeconds % 60
   let displayMinutes = minutes < 10 ? '0' + minutes : minutes
   let displaySeconds = seconds < 10 ? '0' + seconds : seconds
-  if(seconds==5){
+  if(seconds==targetSeconds && minutes==targetMinutes){
 	clearInterval(interval);
 	timerDisplay.textContent = "Time To Exercise!";
 	audio.play();
