@@ -44,6 +44,30 @@ To use the DeskDynamo, follow these steps:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`npm start`
 
+## Running Application in a Docker Container
+
+To use the DeskDynamo, follow these steps:
+
+1. Install Docker
+
+2. Clone the DeskDynamo App repository from GitHub:
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`git clone https://github.com/SaarthakMaini/DeskDynamo.git`
+
+3. Navigate to the DeskDynamo App directory:
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`cd DeskDynamo`
+
+4. Build Docker Image from Dockerfile:
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`docker build -t deskdynamo .`
+
+5. Run the Docker Container
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`docker run -p 8080:80 deskdynamo`
+
+6. Open `localhost:8080` in browser.
+
 ## **Usage**
 
 Once you have installed and started the app, you can use it as follows:
